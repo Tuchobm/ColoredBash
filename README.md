@@ -10,6 +10,10 @@ Para darle color al prompt, la estructura es la siguiente,
 - ``` \e[m ``` define el final de la secuencia.
 Es importante que definas el final de la secuencia porque de otra manera, el texto, a continuación del prompt aparecerá en el último color que hayas definido.
 
+Con el comando echo se debe de ejecutar con el parametro -e haciendo que el bash interpret el comando \e (o sea el escape) de esta manera:
+
+echo -e ‘Esto es \e[0;31mrojo\e[0m y esto es \e[1;34mazul resaltado\e[0m’
+
 Así, la definición de colores se corresponde con la siguiente tabla,
 
 |Texto|Color texto|Color fondo|
